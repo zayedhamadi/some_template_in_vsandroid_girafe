@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/textViewPoids"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poids :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+            android:id="@+id/editTextPoids"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Poids"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPoids" />
+
+    <TextView
+            android:id="@+id/textViewTaille"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taille :"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPoids" />
+
+    <EditText
+            android:id="@+id/editTextTaille"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Taille"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTaille" />
+
+    <RadioButton
+            android:id="@+id/radioButtonMetre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Métre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTaille" />
+
+    <RadioButton
+            android:id="@+id/radioButtonCentimetre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centimétre"
+            app:layout_constraintStart_toEndOf="@+id/radioButtonMetre"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTaille" />
+
+    <Button
+            android:id="@+id/buttonCalculerIMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculer L'IMC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonMetre" />
+
+    <Button
+            android:id="@+id/buttonRAZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RAZ"
+            app:layout_constraintStart_toEndOf="@+id/buttonCalculerIMC"
+            app:layout_constraintTop_toBottomOf="@+id/radioButtonMetre" />
+
+    <TextView
+            android:id="@+id/textViewResultatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Résultat:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCalculerIMC" />
+
+    <TextView
+            android:id="@+id/textViewResultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vous devez cliquer sur le bouton <Calculer L'IMC> pour obtenir un résultat."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewResultatLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
